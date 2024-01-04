@@ -1,0 +1,52 @@
+.layout_contanier {
+  width: 100%;
+  height: 100vh;
+  // 根据是否折叠计算布局的宽度
+  &.fold {
+    .layout_slider {
+      width: $base-menu-min-width;
+    }
+    .layout_tabbar,
+    .layout_main {
+      width: calc(100vw - $base-menu-min-width);
+      left: $base-menu-min-width;
+    }
+  }
+  .layout_slider {
+    width: $base-menu-width;
+    height: 100vh;
+    // background: $base-menu-color;
+    border-right: 1px solid var(--el-menu-border-color);
+    transition: all 0.3s;
+    .scrollbar {
+      width: 100%;
+      height: calc(100vh - $base-menu-logo-height);
+      .el-menu {
+        border-right: none;
+      }
+    }
+  }
+  .layout_tabbar {
+    border-bottom: 1px solid #e4e7ed;
+    height: $base-tabbar-height;
+    width: calc(100% - $base-menu-width);
+    position: fixed;
+    top: 0;
+    left: $base-menu-width;
+    transition: all 0.3s;
+  }
+  .layout_main {
+    background: var(--el-bg-color-page);
+    height: calc(100vh - $base-tabbar-height);
+    width: calc(100% - $base-menu-width);
+    // absolute绝对定位。relative相对自身定位。fixed窗口定位
+    position: absolute;
+    top: calc($base-tabbar-height);
+    left: $base-menu-width;
+    overflow: auto;
+    transition: all 0.3s;
+    .tags {
+      height: $base-tags-width;
+    }
+  }
+}

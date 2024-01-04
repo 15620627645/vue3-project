@@ -1,0 +1,97 @@
+.layout {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  // 纵向局部vertical--flex
+  .vertical-layout {
+    width: 100px;
+    height: 80px;
+    border: #ccc solid 1px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 0 0 5px 1px #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 5px 1px var(--el-color-primary);
+    }
+    div {
+      margin: 2px;
+      border-radius: 3px;
+    }
+    .menu-vertical {
+      width: 20%;
+      height: 94%;
+      background-color: var(--el-color-primary);
+    }
+    .right-vertical {
+      width: 100%;
+      height: 100%;
+      .hearder-vertical {
+        height: 20%;
+        background-color: var(--el-color-primary-light-5);
+
+        margin-bottom: 5px;
+      }
+      .main-vertical {
+        height: calc(70% - 3px);
+        border: 1px dashed var(--el-color-primary);
+        background-color: var(--el-color-primary-light-8);
+
+        position: relative;
+      }
+    }
+  }
+  // 经典布局---grab
+  .classics-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: repeat(3, auto);
+    padding: 4px 7px 7px 7px;
+    .hearder-classics {
+      height: 60%;
+      grid-column: 1/4;
+      background-color: var(--el-color-primary-light-5);
+    }
+    .meun-classics {
+      grid-row: 2/4;
+      height: 100%;
+      background-color: var(--el-color-primary);
+    }
+    .main-classics {
+      height: 100%;
+      width: 92%;
+      grid-area: 2/2/4/4;
+      border: 1px dashed var(--el-color-primary);
+      background-color: var(--el-color-primary-light-8);
+      position: relative;
+    }
+  }
+
+  // 选择layout样式
+  .click-layout {
+    border: 2px solid var(--el-color-primary) !important;
+    &:hover {
+      box-shadow: 0 0 5px 1px #ccc !important;
+    }
+  }
+  // icon样式
+  .el-icon {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: var(--el-color-primary);
+  }
+}
+.theme-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+  span{
+    font-size: 14px;
+  }
+}

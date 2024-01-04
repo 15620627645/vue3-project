@@ -1,0 +1,16 @@
+//css全局变量-需要在vite.config中定义全局变量的位置
+
+//左侧菜单的宽度
+$base-menu-width:260px;
+// 菜单最小宽度
+$base-menu-min-width:60px;
+//左侧菜单的颜色
+$base-menu-color:#001529;
+// 左侧logo高度
+$base-menu-logo-height:50px;
+// 左侧logo文字大小
+$base-logo-title-fontSize: 20px;
+// tabbar的高度
+$base-tabbar-height:50px;
+// tag的高度
+$base-tags-width:40px
